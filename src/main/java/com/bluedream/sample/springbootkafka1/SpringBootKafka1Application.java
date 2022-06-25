@@ -1,11 +1,14 @@
 package com.bluedream.sample.springbootkafka1;
 
+import com.bluedream.sample.springbootkafka1.entity.Message;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.kafka.core.KafkaTemplate;
+
+import java.time.LocalDateTime;
 
 @SpringBootApplication
 public class SpringBootKafka1Application {
@@ -19,7 +22,7 @@ public class SpringBootKafka1Application {
 	}
 
 	@Bean
-	CommandLineRunner commandLineRunner(KafkaTemplate<String, String> kafkaTemplate) {
+	CommandLineRunner commandLineRunner(KafkaTemplate<String, Message> kafkaTemplate) {
 		return args -> {
 			// kafkaTemplate.send("amigoscode", new Message("Hello From Kafka", LocalDateTime.now()));
 			/*
@@ -27,7 +30,9 @@ public class SpringBootKafka1Application {
 				kafkaTemplate.send(topicName1, "Hello world from Kafka1Application - count time:" +i);
 			}
 			 */
-			kafkaTemplate.send(topicName1, "Hello world for Listener ");
+			// kafkaTemplate.send(topicName1, "Hello world for Listener ");
+			kafkaTemplate.send(topicName1, new Message("Hello world for Listener ",  LocalDateTime.now()) );
+
 		};
 	}
 

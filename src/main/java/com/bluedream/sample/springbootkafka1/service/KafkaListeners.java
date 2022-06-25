@@ -1,5 +1,6 @@
 package com.bluedream.sample.springbootkafka1.service;
 
+import com.bluedream.sample.springbootkafka1.entity.Message;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
@@ -11,9 +12,10 @@ public class KafkaListeners {
     private String topicName1;
 
 
-    @KafkaListener(topics = "NewTopic1", groupId = "groupId", containerGroup = "messageFactory")
-    // void listener(Message data) {
-    void listener(String data) {
+    //@KafkaListener(topics = "NewTopic1", groupId = "groupId", containerGroup = "mesgKafkaListenerContainerFactory")
+    @KafkaListener(topics = "NewTopic1", groupId = "group-01", containerFactory = "mesgKafkaListenerContainerFactory")
+    void listener(Message data) {
+
         System.out.println("Listener received: " + data + " ");
     }
 

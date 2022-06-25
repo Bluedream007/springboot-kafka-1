@@ -56,5 +56,10 @@ kafka-console-producer --bootstrap-server broker:9092 \
 * [Concurrency in Spring WebFlux](https://www.baeldung.com/spring-webflux-concurrency)
 * [Apache Kafka and API Management with Service Mesh](https://www.confluent.io/events/kafka-summit-apac-2021/apache-kafka-and-api-management-api-gateway-friends-enemies-or-frenemies/)  
 * [Java 14 Record Keyword](https://www.baeldung.com/java-record-keyword)
-
-
+* [Intro to Apache Kafka with Spring](https://www.baeldung.com/spring-kafka)
+  - Custom Message Converters
+  
+* For Error 
+  [Jackson – JsonMappingException (No serializer found for class](https://www.baeldung.com/jackson-jsonmappingexception)
+  [Jackson JsonMappingException – No serializer found for class](https://tedblob.com/jackson-jsonmappingexception-no-serializer-found-for-class/)
+  [Could not write JSON: No serializer found for 的坑](https://cloud.tencent.com/developer/article/1422269)

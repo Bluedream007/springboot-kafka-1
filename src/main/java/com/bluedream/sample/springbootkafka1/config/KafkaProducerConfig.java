@@ -1,5 +1,6 @@
 package com.bluedream.sample.springbootkafka1.config;
 
+import com.bluedream.sample.springbootkafka1.entity.Message;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -31,7 +32,7 @@ public class KafkaProducerConfig {
         return props;
     }
 
-    /*
+
     @Bean
     public ProducerFactory<String, Message> producerFactory(){
         return new DefaultKafkaProducerFactory<>(producerConfig());
@@ -42,9 +43,9 @@ public class KafkaProducerConfig {
     ){
         return new KafkaTemplate<>(producerFactory);
     }
-    */
 
 
+    /*
     @Bean
     public ProducerFactory<String, String> producerFactory(){
         return new DefaultKafkaProducerFactory<>(producerConfig());
@@ -56,6 +57,7 @@ public class KafkaProducerConfig {
     ){
         return new KafkaTemplate<>(producerFactory);
     }
+     */
 
 
 }
