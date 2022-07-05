@@ -9,7 +9,8 @@
 * Github sourec code - https://github.com/webmak1/Kafka-Tutorial
 * YouTube - https://www.youtube.com/watch?v=SqVfCyfCJqw
 * [APACHE KAFKA QUICKSTART](https://kafka.apache.org/quickstart)
-*[Spring for Apache Kafka](https://spring.io/projects/spring-kafka#overview)
+* [Spring for Apache Kafka](https://spring.io/projects/spring-kafka#overview)
+* TODo - [Kafka Streams With Spring Boot](https://www.baeldung.com/spring-boot-kafka-streams)
 
 For further reference, please consider the following sections:
 
@@ -32,6 +33,8 @@ The following guides illustrate how to use some features concretely:
 - Install & Start the application using Docker Compose
   ./docker-compose
 > docker-compose -f cp-Kafka_docker-compose.yml up -d
+- folder: /home/charlotte-lp/Charlotte/DVP_Java/Java_Test/Kafka/docker-compose
+> docker-compose -f zk-single-kafka-single.yml up -d
 - stop  
 > docker-compose -f cp-Kafka_docker-compose.yml down
 

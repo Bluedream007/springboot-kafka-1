@@ -31,7 +31,13 @@ public class SpringBootKafka1Application {
 			}
 			 */
 			// kafkaTemplate.send(topicName1, "Hello world for Listener ");
-			kafkaTemplate.send(topicName1, new Message("Hello world for Listener ",  LocalDateTime.now()) );
+
+			// for Message entity
+			// kafkaTemplate.send(topicName1, new Message("Hello world for Listener ",  LocalDateTime.now()) );
+
+			for (int i=0; i<=10_000; i++) {
+				kafkaTemplate.send(topicName1, new Message("Hello world for Listener - count time:" + i,  LocalDateTime.now()) );
+			}
 
 		};
 	}
